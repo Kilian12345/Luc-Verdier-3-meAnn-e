@@ -21,7 +21,7 @@ public class LevelData
 
     public int savedParticules;
 
-    public int intialParticules;
+    public int initialParticules;
 
     private int partCoef;
 

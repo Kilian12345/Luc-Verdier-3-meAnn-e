@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8365888096440252866}
   m_Layer: 0
   m_Name: Grid
-  m_TagString: Untagged
+  m_TagString: Grid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9e2e1e7eacb30644a4ebccc50df6fd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 4
+  size: 1.4
   gridScale: 23
 --- !u!212 &8365888096440252866
 SpriteRenderer:
@@ -64,7 +64,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 09cdcd7967c74474c9b61d78612113ec, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4170794361630979780}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.4, y: 0.7, z: 0}
+  m_LocalPosition: {x: 9.7, y: 0.4, z: 0}
   m_LocalScale: {x: 62.419918, y: 62.419918, z: 62.419918}
   m_Children: []
   m_Father: {fileID: 9089790685076319620}
@@ -121,6 +121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9089790685076319620}
   - component: {fileID: 2805184315750356730}
+  - component: {fileID: 1496331120}
   m_Layer: 0
   m_Name: SpawnParticles
   m_TagString: Untagged
@@ -193,3 +194,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1496331120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5292203910871656237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a40c4dbc70f4acb449ac80a891c003da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particle: {fileID: 5606749345414102896, guid: 79f9ee846d8d40a479838c3a58831109,
+    type: 3}
+  spawnNumbers: 30
+  frequence: 0.1
+  SpawnDirection: {x: 0, y: 1}
+  SpawnWidth: 0.25
+  particleSpeed: 4
+  particleSize: 1.67
+  particleColliderSize: 2.03
+  isSpawning: 0
