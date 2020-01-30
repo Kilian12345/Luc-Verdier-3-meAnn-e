@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class DragAndDrop : MonoBehaviour
 {
     private Color mouseOverColor = Color.blue;
@@ -18,6 +19,9 @@ public class DragAndDrop : MonoBehaviour
     {
         grid = FindObjectOfType<Grid>();
         mat = GetComponent<Material>();
+
+        //distance = transform.position;
+        PlaceCubeNear(transform.position);
     }
 
     void OnMouseEnter()

@@ -50,6 +50,19 @@ public class Particles : MonoBehaviour
             dir = collision.gameObject.GetComponent<Slider>().facingDirection;
             colliding = true;
         }
+
+        if (collision.gameObject.tag == "Static")
+        {
+            if (collision.gameObject.GetComponent<StaticSilder>().hasDirection == true)
+            {
+                dir = collision.gameObject.GetComponent<StaticSilder>().facingDirection;
+                colliding = true;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        }
         /*else
         {
             colliding = false;

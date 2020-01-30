@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+[ExecuteInEditMode]
 public class Grid : MonoBehaviour
 {
     [Range(0.6f,5f)]public float size = 1f;

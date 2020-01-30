@@ -41,7 +41,7 @@ public class SpawnParticles : MonoBehaviour
 
     IEnumerator SpawnRate()
     {
-        for (int i = 0; i <= spawnNumbers; i++)
+        for (int i = 1; i <= spawnNumbers; i++)
         {
 
             yield return new WaitForSeconds(frequence);
