@@ -103,6 +103,8 @@ MonoBehaviour:
   dir: {x: 0, y: 0}
   boostSecond: 0.05
   colliding: 0
+  particleEffect: {fileID: 3498794623380564998, guid: effc0977f7dab0a47a8c2c7357001051,
+    type: 3}
 --- !u!61 &8634888657822685725
 BoxCollider2D:
   m_ObjectHideFlags: 0

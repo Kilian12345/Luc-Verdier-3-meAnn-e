@@ -50,7 +50,7 @@ public class DragAndDrop : MonoBehaviour
 
         PlaceCubeNear(ray.GetPoint(distance));
 
-        while (isAboveStatic == true)
+        if (isAboveStatic == true)
         {
             PlaceCubeNear(ray.GetPoint(distance) + new Vector3(1, 0, 0));
 

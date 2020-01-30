@@ -14,6 +14,7 @@ public class Particles : MonoBehaviour
     public float boostSecond;
     public bool colliding;
 
+    [SerializeField] GameObject particleEffect;
     private void Start()
     {
         baseSpeed = speed;
@@ -60,6 +61,7 @@ public class Particles : MonoBehaviour
             }
             else
             {
+                Instantiate(particleEffect, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }
         }
