@@ -10,7 +10,7 @@ public class Slider
 
 public class Level
 {
-    public int tiles;
+    public int tiles; // square tile size of the map ; 10 for 10x10 map, etc.
     public List<Slider> sliders;
 
     //public int entryTileRef
@@ -22,20 +22,34 @@ public class GameManager : MonoBehaviour
     [Header("Level Generator")]
     public List<Level> levels;
 
-    // Start is called before the first frame update
+    bool endLevel = false;
+
+    public DataManager dataManager;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (endLevel)
+        {
+            //Player Stats
+            dataManager.levelDatas.Add(new LevelData());
+            
+            //Scoring
+
+        }
     }
 
-    void GenerateLevel(int nTile)
+    /*
+    void GenerateLevel(int nTile, List<Slider> sAmount)
     {
+        // Generate Level map with nTile tiles
+        // Kilian code
+
 
     }
+    */
 }
