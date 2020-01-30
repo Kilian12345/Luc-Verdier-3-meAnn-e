@@ -5,7 +5,7 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class DragAndDrop : MonoBehaviour
 {
-    private Color mouseOverColor = Color.blue;
+    private Color mouseOverColor = Color.green;
     private Color originalColor = Color.yellow;
     private bool dragging = false;
     private float distance;
@@ -15,7 +15,7 @@ public class DragAndDrop : MonoBehaviour
     RaycastHit hitInfo;
     Ray ray;
 
-    bool isAboveStatic;
+    [SerializeField] bool isAboveStatic;
 
     private void Start()
     {
@@ -80,9 +80,9 @@ public class DragAndDrop : MonoBehaviour
         transform.localScale = new Vector3(grid.size, grid.size, grid.size);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Static")
+        if (collision.gameObject.tag == "Static")
         {
             isAboveStatic = true;
         }
