@@ -36,7 +36,7 @@ public class Grid : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
-        for (float x = transform.position.x; x < transform.position.x + gridScale; x += size)
+        for (float x = transform.position.x; x < transform.position.x + gridScale * 2; x += size)
         {
             for (float y = transform.position.y; y < transform.position.y + gridScale; y += size)
             {

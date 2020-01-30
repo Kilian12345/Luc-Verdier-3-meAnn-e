@@ -8,6 +8,7 @@ TagManager:
   - Particle
   - End
   - Static
+  - Grid
   layers:
   - Default
   - TransparentFX

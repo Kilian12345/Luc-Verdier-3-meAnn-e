@@ -7,11 +7,15 @@ public class endBox : MonoBehaviour
 {
     public int numberParticle;
     Grid grid;
+    RaycastHit hitInfo;
+    Ray ray;
+    private float distance;
 
     private void Start()
     {
         grid = FindObjectOfType<Grid>();
         numberParticle = 0;
+        PlaceCubeNear(transform.position);
     }
 
     private void Update()
@@ -31,5 +35,13 @@ public class endBox : MonoBehaviour
     void SliderScale()
     {
         transform.localScale = new Vector3(grid.size, grid.size, grid.size);
+    }
+
+    private void PlaceCubeNear(Vector3 clickPoint)
+    {
+        var finalPosition = grid.GetNearestPointOnGrid(clickPoint);
+        transform.position = new Vector3(finalPosition.x, finalPosition.y, 0);
+
+        //GameObject.CreatePrimitive(PrimitiveType.Sphere).transform.position = nearPoint;
     }
 }
