@@ -1049,6 +1049,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 943fc28d452af2745b65deb8eac5b5c4, type: 3}
+--- !u!1 &272077449 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5292203910871656237, guid: 943fc28d452af2745b65deb8eac5b5c4,
+    type: 3}
+  m_PrefabInstance: {fileID: 272077448}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &288464354
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1564,6 +1570,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7237835261922175386, guid: ba7bb098636f261479e1bef014d90bda,
     type: 3}
   m_PrefabInstance: {fileID: 487122968}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &600424340 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1319289671683803176, guid: eb19ec5f08b1c0a46a69af9d19801d12,
+    type: 3}
+  m_PrefabInstance: {fileID: 1658132594}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &627465468
 PrefabInstance:
@@ -3259,6 +3271,59 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1294046831}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1311442993
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1311442995}
+  - component: {fileID: 1311442994}
+  m_Layer: 0
+  m_Name: Level Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1311442994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311442993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 552f33b73fabf014f94774e82f7d2a15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataManager: {fileID: 11400000, guid: ee515cbb1db59194fa24a69d7471a366, type: 2}
+  particleSpawner: {fileID: 272077449}
+  endDoor: {fileID: 600424340}
+  endDisplay: {fileID: 0}
+  levelIndex: 1
+  hasBeenPlaced: 0
+  placedSliders: 0
+  minimumSliders: 4
+  maximumSliders: 7
+  particleQuantity: 60
+--- !u!4 &1311442995
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311442993}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1339899495
 PrefabInstance:
   m_ObjectHideFlags: 0

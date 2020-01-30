@@ -8,7 +8,7 @@ public class SliderBoy
     public GameObject sliderObject;
 }
 
-public class Level
+public class LevelBoy
 {
     public int tiles; // square tile size of the map ; 10 for 10x10 map, etc.
     public List<SliderBoy> sliderBoys;
@@ -17,9 +17,13 @@ public class Level
     //public int exitTileRef
 }
 
+///\
+
 public class GameManager : MonoBehaviour
 {
-    bool endLevel = false;
+    private bool endLevel = false;
+    private bool isEnded = false;
+    private bool won = false;
 
     public DataManager dataManager;
 
@@ -33,8 +37,8 @@ public class GameManager : MonoBehaviour
     [Header("Level Info")]
     public int levelIndex;
 
-    [HideInInspector] public bool hasBeenPlaced = false;
-    [HideInInspector] public int placedSliders = 0;
+    [HideInInspector] public bool hasBeenPlaced = false; // Accessed by each slider when they are placed on the board
+    [HideInInspector] public int placedSliders = 0; // Accessed by each slider every time they either are placed on the boardzone or placed in the inventory zone
 
     public int minimumSliders;
     public int maximumSliders;
@@ -58,15 +62,22 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (endLevel)
+        if (endLevel && !isEnded)
         {
+            //Win or Lose
+            if (endDoor.GetComponent<endBox>().numberParticle > 0) { won = true; starScore = 1; }
+
+            else won = false;
+
             //Scoring
             ScoreData();
 
             //Player Stats
             PlayerSecretData(levelIndex);
 
-            DisplayEnding();
+            DisplayEnding(won);
+
+            isEnded = true;
         }
 
         else
@@ -80,14 +91,16 @@ public class GameManager : MonoBehaviour
     void DataSetup()
     {
         currentLevel.initialParticules = particleQuantity; //particleSpawner.GetComponent<SpawnParticles>().spawnNumbers;
+
         currentLevel.minPieces = minimumSliders;
         currentLevel.maxPieces = maximumSliders;
     }
 
     void ScoreData()
     {
-        currentLevel.usedPieces = 0;
         currentLevel.savedParticules = endDoor.GetComponent<endBox>().numberParticle;
+
+        currentLevel.usedPieces = placedSliders;
 
         scoreToDisplay = currentLevel.Score(
             currentLevel.EfficiencyCoefficient(currentLevel.usedPieces, currentLevel.minPieces, currentLevel.maxPieces),
@@ -104,21 +117,24 @@ public class GameManager : MonoBehaviour
     {
         if (lvl == 1 || lvl == 2) // Data for Experimentation Levels
         {
-            currentLevel.numberOfTries = 0;
+            currentLevel.numberOfTries += 1;
+
             currentLevel.totalTime = timeT;
             currentLevel.timeBeforeFirstPiece = timeBFP;
         }
 
         else if (lvl == 3 || lvl == 4) // Data for One Try Levels
         {
-
+            // Other variables
         }
     }
 
-    void DisplayEnding()
+    void DisplayEnding(bool isWon)
     {
-
+        // UI Display --> Win or Lose + star score & replay options
     }
+
+    ///\
 
     /*
     void GenerateLevel(int nTile, List<Slider> sAmount)
