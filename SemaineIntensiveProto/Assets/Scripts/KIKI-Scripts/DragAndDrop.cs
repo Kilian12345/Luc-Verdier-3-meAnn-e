@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class DragAndDrop : MonoBehaviour
 {
     private Color mouseOverColor = Color.blue;
@@ -18,6 +19,9 @@ public class DragAndDrop : MonoBehaviour
     {
         grid = FindObjectOfType<Grid>();
         mat = GetComponent<Material>();
+
+        //distance = transform.position;
+        PlaceCubeNear(transform.position);
     }
 
     void OnMouseEnter()
@@ -50,15 +54,22 @@ public class DragAndDrop : MonoBehaviour
         {
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Vector3 rayPoint = ray.GetPoint(distance);
-            transform.position = new Vector3(rayPoint.x - 0.5f, rayPoint.y - 0.5f, 0);
+            transform.position = new Vector3(rayPoint.x, rayPoint.y, 0);
         }
+
+        SliderScale();
     }
 
     private void PlaceCubeNear(Vector3 clickPoint)
     {
         var finalPosition = grid.GetNearestPointOnGrid(clickPoint);
-        transform.position = finalPosition;
+        transform.position = new Vector3(finalPosition.x, finalPosition.y, 0);
 
         //GameObject.CreatePrimitive(PrimitiveType.Sphere).transform.position = nearPoint;
+    }
+
+    void SliderScale()
+    {
+        transform.localScale = new Vector3(grid.size, grid.size, grid.size);
     }
 }
