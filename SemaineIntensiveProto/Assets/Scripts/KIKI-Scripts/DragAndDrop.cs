@@ -16,6 +16,7 @@ public class DragAndDrop : MonoBehaviour
     Ray ray;
 
     [SerializeField] bool isAboveStatic;
+    public bool hasBeenPlaced;
 
     private void Start()
     {
@@ -44,47 +45,61 @@ public class DragAndDrop : MonoBehaviour
 
     void OnMouseUp()
     {
+        hasBeenPlaced = true; // Data manger
         dragging = false;
 
         PlaceCubeNear(ray.GetPoint(distance));
 
-        if (isAboveStatic == true)
+        while (isAboveStatic == true)
         {
             PlaceCubeNear(ray.GetPoint(distance) + new Vector3(1, 0, 0));
+
         }
-        
     }
 
-    void Update()
-    {
-        if (dragging)
+        void Update()
         {
-            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            Vector3 rayPoint = ray.GetPoint(distance);
-            transform.position = new Vector3(rayPoint.x, rayPoint.y, 0);
+            if (dragging)
+            {
+                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                Vector3 rayPoint = ray.GetPoint(distance);
+                transform.position = new Vector3(rayPoint.x, rayPoint.y, 0);
+            }
+
+            SliderScale();
         }
 
-        SliderScale();
-    }
-
-    private void PlaceCubeNear(Vector3 clickPoint)
-    {
-        var finalPosition = grid.GetNearestPointOnGrid(clickPoint);
-        transform.position = new Vector3(finalPosition.x, finalPosition.y, 0);
-
-        //GameObject.CreatePrimitive(PrimitiveType.Sphere).transform.position = nearPoint;
-    }
-
-    void SliderScale()
-    {
-        transform.localScale = new Vector3(grid.size, grid.size, grid.size);
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Static")
+        private void PlaceCubeNear(Vector3 clickPoint)
         {
-            isAboveStatic = true;
+            var finalPosition = grid.GetNearestPointOnGrid(clickPoint);
+            transform.position = new Vector3(finalPosition.x, finalPosition.y, 0);
+
+            //GameObject.CreatePrimitive(PrimitiveType.Sphere).transform.position = nearPoint;
         }
-    }
+
+        void SliderScale()
+        {
+            transform.localScale = new Vector3(grid.size, grid.size, grid.size);
+        }
+
+        private void OnTriggerStay2D(Collider2D collision)
+        {
+            if (collision.gameObject.tag == "Static")
+            {
+                Debug.Log("InZone");
+                isAboveStatic = true;
+            }
+
+        }
+
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            if (collision.gameObject.tag == "Static")
+            {
+                Debug.Log("Out");
+                isAboveStatic = false;
+            }
+        }
+    
+
 }

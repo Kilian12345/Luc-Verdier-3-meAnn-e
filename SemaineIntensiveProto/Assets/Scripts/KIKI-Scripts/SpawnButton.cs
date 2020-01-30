@@ -30,7 +30,14 @@ public class SpawnButton : MonoBehaviour
         {
             spawnPar.isSpawning = true;
             hasSpawned = true;
+            StartCoroutine(wait());
         }
+    }
+
+    IEnumerator wait()
+    {
+        yield return new WaitForSeconds(4);
+        hasSpawned = false;
     }
 
 
