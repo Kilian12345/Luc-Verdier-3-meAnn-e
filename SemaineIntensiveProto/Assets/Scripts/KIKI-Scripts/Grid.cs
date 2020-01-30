@@ -2,10 +2,17 @@
 
 public class Grid : MonoBehaviour
 {
-    [SerializeField]
-    [Range(0.6f,5f)]private float size = 1f;
+    [Range(0.6f,5f)]public float size = 1f;
 
     public int gridScale;
+
+    Material mat;
+    float textureTillingValue;
+
+    private void Start()
+    {
+        mat = GetComponent<SpriteRenderer>().material; 
+    }
 
     public Vector3 GetNearestPointOnGrid(Vector3 position)
     {
@@ -37,6 +44,23 @@ public class Grid : MonoBehaviour
             }
 
         }
+
+    }
+
+    private void Update()
+    {
+        GridProp();
+    }
+
+    float map(float s, float a1, float a2, float b1, float b2)
+    {
+        return b1 + (s - a1) * (b2 - b1) / (a2 - a1);
+    }
+
+    void GridProp()
+    {
+        textureTillingValue = map(size, 0.6f, 4.6f, 7.67f, 1f);
+        mat.SetFloat("_BothTilling", 0.04654941f + (300.8771f - 0.04654941f) / (1 + Mathf.Pow((size / 0.02499663f), 1.028633f)));
     }
 
 
