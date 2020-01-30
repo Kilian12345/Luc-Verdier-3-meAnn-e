@@ -15,6 +15,8 @@ public class DragAndDrop : MonoBehaviour
     RaycastHit hitInfo;
     Ray ray;
 
+    bool isAboveStatic;
+
     private void Start()
     {
         grid = FindObjectOfType<Grid>();
@@ -45,6 +47,11 @@ public class DragAndDrop : MonoBehaviour
         dragging = false;
 
         PlaceCubeNear(ray.GetPoint(distance));
+
+        if (isAboveStatic == true)
+        {
+            PlaceCubeNear(ray.GetPoint(distance) + new Vector3(1, 0, 0));
+        }
         
     }
 
@@ -71,5 +78,13 @@ public class DragAndDrop : MonoBehaviour
     void SliderScale()
     {
         transform.localScale = new Vector3(grid.size, grid.size, grid.size);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Static")
+        {
+            isAboveStatic = true;
+        }
     }
 }
