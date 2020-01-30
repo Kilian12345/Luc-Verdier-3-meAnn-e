@@ -26,9 +26,13 @@ public class GameManager : MonoBehaviour
 
     public DataManager dataManager;
 
+    public int levelIndex;
+
     void Start()
     {
-        
+        dataManager.levelDatas[levelIndex].intialParticules = 0;
+        dataManager.levelDatas[levelIndex].minPieces = 0;
+        dataManager.levelDatas[levelIndex].maxPieces = 0;
     }
 
     void Update()
@@ -36,7 +40,8 @@ public class GameManager : MonoBehaviour
         if (endLevel)
         {
             //Player Stats
-            dataManager.levelDatas.Add(new LevelData());
+            
+
             
             //Scoring
 

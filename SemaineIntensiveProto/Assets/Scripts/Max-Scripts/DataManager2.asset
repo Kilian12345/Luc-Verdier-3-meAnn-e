@@ -12,6 +12,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e21bc20d40ec90142b1ea7fe87c414df, type: 3}
   m_Name: DataManager2
   m_EditorClassIdentifier: 
+  levelDatas:
+  - score: 0
+    usedPieces: 0
+    maxPieces: 0
+    minPieces: 0
+    savedParticules: 0
+    intialParticules: 0
+    numberOfTries: 0
+    totalTime: 0
+    timeBeforeFirstPiece: 0
+    someData: 0
+  - score: 0
+    usedPieces: 0
+    maxPieces: 0
+    minPieces: 0
+    savedParticules: 0
+    intialParticules: 0
+    numberOfTries: 0
+    totalTime: 0
+    timeBeforeFirstPiece: 0
+    someData: 0
+  - score: 0
+    usedPieces: 0
+    maxPieces: 0
+    minPieces: 0
+    savedParticules: 0
+    intialParticules: 0
+    numberOfTries: 0
+    totalTime: 0
+    timeBeforeFirstPiece: 0
+    someData: 0
+  - score: 0
+    usedPieces: 0
+    maxPieces: 0
+    minPieces: 0
+    savedParticules: 0
+    intialParticules: 0
+    numberOfTries: 0
+    totalTime: 0
+    timeBeforeFirstPiece: 0
+    someData: 0
+  - score: 0
+    usedPieces: 0
+    maxPieces: 0
+    minPieces: 0
+    savedParticules: 0
+    intialParticules: 0
+    numberOfTries: 0
+    totalTime: 0
+    timeBeforeFirstPiece: 0
+    someData: 0
   mentalValue: 0
   experimentValue: 0
   anticipationValue: 0
