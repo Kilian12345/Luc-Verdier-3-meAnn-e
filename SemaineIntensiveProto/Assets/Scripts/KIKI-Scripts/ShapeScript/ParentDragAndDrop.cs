@@ -14,12 +14,14 @@ public class ParentDragAndDrop : MonoBehaviour
     private Grid grid;
     RaycastHit hitInfo;
     Ray ray;
+    Manager mana;
 
     [SerializeField] bool isAboveStatic;
     public bool hasBeenPlaced;
 
     private void Start()
     {
+        mana = FindObjectOfType<Manager>();
         grid = FindObjectOfType<Grid>();
         PlaceCubeNear(transform.position);
     }
@@ -61,12 +63,21 @@ public class ParentDragAndDrop : MonoBehaviour
             sliders[i].Placing = true;
         }
 
-        hasBeenPlaced = true;
-        PlaceCubeNear(ray.GetPoint(distance));
+        if (mana.startGame == false)
+        {
+            hasBeenPlaced = true;
+            PlaceCubeNear(ray.GetPoint(distance));
+        }
     }
 
     void Update()
     {
+
+        if (mana.startGame == true)
+        {
+            dragging = false;
+        }
+
         if (dragging)
         {
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);

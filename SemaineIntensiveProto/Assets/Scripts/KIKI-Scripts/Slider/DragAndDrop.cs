@@ -5,6 +5,7 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class DragAndDrop : MonoBehaviour
 {
+    Manager mana;
     private Color mouseOverColor = Color.green;
     private Color originalColor = Color.yellow;
     private bool dragging = false;
@@ -22,6 +23,7 @@ public class DragAndDrop : MonoBehaviour
     {
         grid = FindObjectOfType<Grid>();
         mat = GetComponent<Material>();
+        mana = FindObjectOfType<Manager>();
 
         //distance = transform.position;
         PlaceCubeNear(transform.position);
@@ -59,6 +61,11 @@ public class DragAndDrop : MonoBehaviour
 
         void Update()
         {
+            if(mana.startGame == true)
+            {
+                dragging = false;
+            }
+
             if (dragging)
             {
                 ray = Camera.main.ScreenPointToRay(Input.mousePosition);
