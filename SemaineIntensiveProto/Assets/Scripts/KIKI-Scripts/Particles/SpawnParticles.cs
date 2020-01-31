@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnParticles : MonoBehaviour
 {
-
+    Manager mana;
     public GameObject particle;
     public int spawnNumbers;
     public float frequence;
@@ -25,6 +25,7 @@ public class SpawnParticles : MonoBehaviour
 
     private void Start()
     {
+        mana = FindObjectOfType<Manager>();
         LeftToSpawn = spawnNumbers;
     }
 
@@ -33,6 +34,7 @@ public class SpawnParticles : MonoBehaviour
     {
         if (isSpawning == true)
         {
+            mana.startGame = true;
             StartCoroutine(SpawnRate());
             isSpawning = false;
         }

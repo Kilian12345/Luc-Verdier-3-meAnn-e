@@ -20,17 +20,29 @@ public class Manager : MonoBehaviour
     float coefParticule;
     float Score;
     public bool endGame;
+    public bool startGame;
 
     [SerializeField] Text text;
+
+    [Space(10)]
+    [Header("Timing")]
+    public float timePlacementPremier;
+    public float timePlay;
+    public float time;
+    bool placedFirst = false;
+    bool StartGameOfficial = false;
+
 
     [Space(10)]
     [Header("A remplir")]
     public int nbrOptiamlPiece;
     public int nbrMerdePiece;
 
-
     private void Update()
     {
+
+        time += Time.deltaTime;
+
         nbrPieceExistanteParent = GameObject.FindObjectsOfType<ParentDragAndDrop>().Length;
         nbrPieceExistanteChild = GameObject.FindObjectsOfType<DragAndDrop>().Length;
         PieceExistanteParent = FindObjectsOfType<ParentDragAndDrop>();
@@ -62,7 +74,19 @@ public class Manager : MonoBehaviour
 
         nbrPiecePose = nbrPiecePoseC + nbrPiecePoseP;
 
-        if(endGame == true)
+
+        if (nbrPiecePose == 1 && placedFirst == false)
+        {
+            placedFirst = true;
+            timePlacementPremier = time;
+        }
+        if (startGame == true && StartGameOfficial == false)
+        {
+            StartGameOfficial = true;
+            timePlay = time;
+        }
+
+        if (endGame == true)
         {
             FinalCalcul();
         }
