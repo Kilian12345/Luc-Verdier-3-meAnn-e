@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/KIKI-Scene.unity
+    guid: dce7765cc615ffd4e9d61a0711a4568c
+  - enabled: 1
+    path: Assets/Scenes/Luc-Scene_lvv1.unity
+    guid: 167827c21cf496b4c886612ec257b100
   m_configObjects: {}

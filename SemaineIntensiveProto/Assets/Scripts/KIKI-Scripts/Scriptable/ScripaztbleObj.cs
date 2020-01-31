@@ -9,6 +9,9 @@ public class LevelData
     public float score;
     public float TimeFirstPlace;
     public float TimeFirstPlay;
+
+    public float conceptValue;
+    public float experimentValue;
 }
 
 [CreateAssetMenu(fileName = "New Scriptable", menuName = "Scriptable Object")]

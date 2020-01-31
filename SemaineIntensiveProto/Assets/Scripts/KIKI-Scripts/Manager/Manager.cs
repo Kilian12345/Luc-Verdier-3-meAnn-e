@@ -22,6 +22,9 @@ public class Manager : MonoBehaviour
     public bool endGame;
     public bool startGame;
 
+    public float conceptVal;
+    public float expVal;
+
     [SerializeField] Text text;
 
     [Space(10)]
@@ -99,6 +102,9 @@ public class Manager : MonoBehaviour
 
     void FinalCalcul()
     {
+        if (nbrPiecePose < nbrOptiamlPiece) nbrPiecePose = nbrOptiamlPiece;
+        else if (nbrPiecePose > nbrMerdePiece) nbrPiecePose = nbrMerdePiece;
+
         coefEfficace = (1 - ((nbrPiecePose - nbrOptiamlPiece) / (nbrMerdePiece - nbrOptiamlPiece))) * 100;
         coefParticule = (float)((float)nbrParticleArrive / (float)nbrParticleDepart) * 100;
         Score = (coefEfficace * coefParticule) / 100;
@@ -110,4 +116,15 @@ public class Manager : MonoBehaviour
         script.levelDatas[scriptIndex].TimeFirstPlay = timePlay;
     }
 
+    void PlayerSecretStats()
+    {
+        if ((timePlay - timePlacementPremier) < 120f) conceptVal += Score;
+
+        else if (Score == 30) { conceptVal += 20; expVal += 10; }
+
+        else { conceptVal += 10; expVal += 10; }
+
+        script.levelDatas[scriptIndex].conceptValue = conceptVal;
+        script.levelDatas[scriptIndex].experimentValue = expVal;
+    }
 }
