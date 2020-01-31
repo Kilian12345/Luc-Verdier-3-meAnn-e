@@ -9,6 +9,7 @@ TagManager:
   - End
   - Static
   - Grid
+  - Playzone
   layers:
   - Default
   - TransparentFX

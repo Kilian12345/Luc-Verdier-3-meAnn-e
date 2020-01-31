@@ -154,6 +154,7 @@ MonoBehaviour:
   isAboveStatic: 0
   hasBeenPlaced: 0
   Placing: 0
+  Dragging: 0
 --- !u!50 &8753927302366967355
 Rigidbody2D:
   serializedVersion: 4

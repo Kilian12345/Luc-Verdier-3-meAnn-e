@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ParticleCounter : MonoBehaviour
 {
+    Manager mana;
     SpawnParticles spawnP;
     endBox endBox;
     public int numberOfParticle;
@@ -20,21 +21,32 @@ public class ParticleCounter : MonoBehaviour
     {
         spawnP = FindObjectOfType<SpawnParticles>();
         endBox = FindObjectOfType<endBox>();
+        mana = FindObjectOfType<Manager>();
+        numberOfParticle = spawnP.spawnNumbers;
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
+            mana.nbrParticleDepart = spawnP.spawnNumbers;
+            mana.nbrParticleArrive = endBox.numberParticle;
 
-        particle = GameObject.FindGameObjectsWithTag("Particle").Length;
+            particle = GameObject.FindGameObjectsWithTag("Particle").Length;
 
-        numberOfParticle = spawnP.LeftToSpawn + particle;
+            numberOfParticle = spawnP.LeftToSpawn + particle;
 
-        if (numberOfParticle <= 0)
-        {
-            if(endBox.numberParticle == 0) { lostAll = true; hasSome = false; }
-            else { hasSome = true; lostAll = false;}
-        }
+            if (numberOfParticle <= 0)
+            {
+                if (endBox.numberParticle == 0) { lostAll = true; hasSome = false; }
+                else { hasSome = true; lostAll = false; }
+            }
+
+            if (numberOfParticle == 0)
+            {
+                mana.endGame = true;
+                Debug.Log("---END---");
+            }
+        
         
     }
 }

@@ -1,57 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!60 &5652541852937496213
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6722542264345564558}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 1.0122449, y: 1.0112563}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.0137029365, y: 1.0081133}
-      - {x: -0.041119687, y: -0.8613884}
-      - {x: 0.161469, y: -0.8566174}
-      - {x: 1.0260336, y: 0.008896674}
-      - {x: 1.0316317, y: 0.015902178}
-      - {x: 1.035135, y: 0.016612282}
-      - {x: 1.0290302, y: 0.025378974}
-      - {x: 1.0400547, y: 0.0368977}
-      - {x: 1.0408925, y: 0.04489179}
-      - {x: 1.04115, y: 0.05567959}
-      - {x: 1.0376261, y: 0.06457622}
-      - {x: 1.0382066, y: 0.070915855}
-      - {x: 1.0299096, y: 0.09057921}
-      - {x: 1.0304048, y: 0.09790727}
-      - {x: 1.0240405, y: 0.9215762}
-      - {x: 1.0249941, y: 0.9266421}
-      - {x: 1.0287958, y: 0.9308201}
-      - {x: 1.02624, y: 0.9458456}
-      - {x: 1.0227768, y: 0.9769773}
-      - {x: 1.0193177, y: 0.9995382}
-      - {x: 0.99511003, y: 1.0031664}
-      - {x: 0.976166, y: 1.0048221}
-      - {x: 0.9666136, y: 1.0064712}
-      - {x: 0.9636456, y: 1.0051568}
-      - {x: 0.96133614, y: 1.002854}
-      - {x: 0.9504624, y: 1.0073023}
-      - {x: 0.94107145, y: 1.0097736}
 --- !u!60 &147865148908607121
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -112,7 +60,7 @@ GameObject:
   - component: {fileID: 1005847131375334576}
   - component: {fileID: 4680782562140287931}
   - component: {fileID: 4680782562140277828}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: L-Slider-Left-_Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,6 +140,58 @@ MonoBehaviour:
   - {fileID: 5449290468681796550}
   isAboveStatic: 0
   hasBeenPlaced: 0
+--- !u!60 &5652541852937496213
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6722542264345564558}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 1.0122449, y: 1.0112563}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.0137029365, y: 1.0081133}
+      - {x: -0.041119687, y: -0.8613884}
+      - {x: 0.161469, y: -0.8566174}
+      - {x: 1.0260336, y: 0.008896674}
+      - {x: 1.0316317, y: 0.015902178}
+      - {x: 1.035135, y: 0.016612282}
+      - {x: 1.0290302, y: 0.025378974}
+      - {x: 1.0400547, y: 0.0368977}
+      - {x: 1.0408925, y: 0.04489179}
+      - {x: 1.04115, y: 0.05567959}
+      - {x: 1.0376261, y: 0.06457622}
+      - {x: 1.0382066, y: 0.070915855}
+      - {x: 1.0299096, y: 0.09057921}
+      - {x: 1.0304048, y: 0.09790727}
+      - {x: 1.0240405, y: 0.9215762}
+      - {x: 1.0249941, y: 0.9266421}
+      - {x: 1.0287958, y: 0.9308201}
+      - {x: 1.02624, y: 0.9458456}
+      - {x: 1.0227768, y: 0.9769773}
+      - {x: 1.0193177, y: 0.9995382}
+      - {x: 0.99511003, y: 1.0031664}
+      - {x: 0.976166, y: 1.0048221}
+      - {x: 0.9666136, y: 1.0064712}
+      - {x: 0.9636456, y: 1.0051568}
+      - {x: 0.96133614, y: 1.002854}
+      - {x: 0.9504624, y: 1.0073023}
+      - {x: 0.94107145, y: 1.0097736}
 --- !u!1001 &4004862980212510093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -218,6 +218,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SliderRight (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934631832548186945, guid: 4f36b38db14e36443a7995520ff344bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6934631832548186947, guid: 4f36b38db14e36443a7995520ff344bb,
         type: 3}
@@ -337,6 +342,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SliderRight (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6934631832548186945, guid: 4f36b38db14e36443a7995520ff344bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6934631832548186947, guid: 4f36b38db14e36443a7995520ff344bb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -451,6 +461,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SliderDown (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 367110250623330692, guid: c8cff79749ae09f48b7838b434a22b78,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 367110250623330694, guid: c8cff79749ae09f48b7838b434a22b78,
         type: 3}
@@ -582,6 +597,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SliderDown (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 367110250623330692, guid: c8cff79749ae09f48b7838b434a22b78,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 367110250623330694, guid: c8cff79749ae09f48b7838b434a22b78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -704,6 +724,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SliderDown (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 367110250623330692, guid: c8cff79749ae09f48b7838b434a22b78,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 367110250623330694, guid: c8cff79749ae09f48b7838b434a22b78,
         type: 3}

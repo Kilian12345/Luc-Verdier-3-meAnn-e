@@ -63,7 +63,7 @@ GameObject:
   - component: {fileID: 8152733423408392003}
   - component: {fileID: 4333682789384200264}
   - component: {fileID: 4333682789384200119}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: L-Slider-Left-_Up 3Case
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,6 +211,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SliderDown (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 367110250623330692, guid: c8cff79749ae09f48b7838b434a22b78,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 367110250623330694, guid: c8cff79749ae09f48b7838b434a22b78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -344,6 +349,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SliderDown (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 367110250623330692, guid: c8cff79749ae09f48b7838b434a22b78,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 367110250623330694, guid: c8cff79749ae09f48b7838b434a22b78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -465,6 +475,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SliderRight (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6934631832548186945, guid: 4f36b38db14e36443a7995520ff344bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6934631832548186947, guid: 4f36b38db14e36443a7995520ff344bb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -555,6 +570,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SliderDown (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 367110250623330692, guid: c8cff79749ae09f48b7838b434a22b78,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 367110250623330694, guid: c8cff79749ae09f48b7838b434a22b78,
         type: 3}
@@ -673,6 +693,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SliderDown (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 367110250623330692, guid: c8cff79749ae09f48b7838b434a22b78,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 367110250623330694, guid: c8cff79749ae09f48b7838b434a22b78,
         type: 3}
@@ -819,6 +844,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SliderRight (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6934631832548186945, guid: 4f36b38db14e36443a7995520ff344bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6934631832548186947, guid: 4f36b38db14e36443a7995520ff344bb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -948,6 +978,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SliderRight (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934631832548186945, guid: 4f36b38db14e36443a7995520ff344bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6934631832548186947, guid: 4f36b38db14e36443a7995520ff344bb,
         type: 3}

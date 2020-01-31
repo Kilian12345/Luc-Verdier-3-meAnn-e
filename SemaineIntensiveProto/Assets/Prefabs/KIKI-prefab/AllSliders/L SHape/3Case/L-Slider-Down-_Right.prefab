@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 1551361950930308603}
   - component: {fileID: 6379222610766682725}
   - component: {fileID: 6379222610766682778}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: L-Slider-Down-_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,6 +225,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SliderRight (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934631832548186945, guid: 4f36b38db14e36443a7995520ff344bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6934631832548186946, guid: 4f36b38db14e36443a7995520ff344bb,
         type: 3}
@@ -344,6 +349,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SliderDown (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 367110250623330692, guid: c8cff79749ae09f48b7838b434a22b78,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 367110250623330694, guid: c8cff79749ae09f48b7838b434a22b78,
         type: 3}
@@ -485,6 +495,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SliderRight (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6934631832548186945, guid: 4f36b38db14e36443a7995520ff344bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6934631832548186946, guid: 4f36b38db14e36443a7995520ff344bb,
         type: 3}
       propertyPath: m_Sprite
@@ -610,6 +625,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SliderDown (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 367110250623330692, guid: c8cff79749ae09f48b7838b434a22b78,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 367110250623330694, guid: c8cff79749ae09f48b7838b434a22b78,
         type: 3}
@@ -743,6 +763,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SliderDown (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 367110250623330692, guid: c8cff79749ae09f48b7838b434a22b78,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 367110250623330694, guid: c8cff79749ae09f48b7838b434a22b78,
         type: 3}

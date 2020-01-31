@@ -21,16 +21,18 @@ public class SpawnParticles : MonoBehaviour
     [HideInInspector] public bool isSpawning;
     [HideInInspector] public int LeftToSpawn;
 
-
     GameObject spawnObject;
 
+    private void Start()
+    {
+        LeftToSpawn = spawnNumbers;
+    }
 
     // Update is called once per frame
     void Update()
     {
         if (isSpawning == true)
         {
-            LeftToSpawn = spawnNumbers;
             StartCoroutine(SpawnRate());
             isSpawning = false;
         }

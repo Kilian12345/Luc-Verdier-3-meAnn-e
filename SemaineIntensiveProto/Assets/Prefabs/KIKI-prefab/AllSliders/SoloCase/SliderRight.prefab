@@ -202,3 +202,4 @@ MonoBehaviour:
   isAboveStatic: 0
   hasBeenPlaced: 0
   Placing: 0
+  Dragging: 0

@@ -48,6 +48,8 @@ public class ParentDragAndDrop : MonoBehaviour
         {
             sliders[i].Placing = false;
         }
+
+        hasBeenPlaced = false;
     }
 
     void OnMouseUp()
@@ -59,6 +61,7 @@ public class ParentDragAndDrop : MonoBehaviour
             sliders[i].Placing = true;
         }
 
+        hasBeenPlaced = true;
         PlaceCubeNear(ray.GetPoint(distance));
     }
 
