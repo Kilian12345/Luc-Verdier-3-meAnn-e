@@ -38,6 +38,11 @@ public class Manager : MonoBehaviour
     public int nbrOptiamlPiece;
     public int nbrMerdePiece;
 
+    [Space(10)]
+    [Header("Data center")]
+    [SerializeField] ScripaztbleObj script;
+    public int scriptIndex;
+
     private void Update()
     {
 
@@ -99,6 +104,10 @@ public class Manager : MonoBehaviour
         Score = (coefEfficace * coefParticule) / 100;
         Score = Mathf.Round(Score);
         text.text = ("Score :" + Score.ToString());
+
+        script.levelDatas[scriptIndex].score = Score;
+        script.levelDatas[scriptIndex].TimeFirstPlace = timePlacementPremier;
+        script.levelDatas[scriptIndex].TimeFirstPlay = timePlay;
     }
 
 }
