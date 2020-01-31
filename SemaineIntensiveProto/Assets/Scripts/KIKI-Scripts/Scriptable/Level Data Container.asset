@@ -13,18 +13,28 @@ MonoBehaviour:
   m_Name: Level Data Container
   m_EditorClassIdentifier: 
   levelDatas:
-  - score: 60
-    TimeFirstPlace: 3.6903718
-    TimeFirstPlay: 12.199941
+  - score: 100
+    TimeFirstPlace: 6.326201
+    TimeFirstPlay: 14.422676
+    conceptValue: 97
+    experimentValue: 0
+  - score: 97
+    TimeFirstPlace: 6.1791344
+    TimeFirstPlay: 53.916862
+    conceptValue: 100
+    experimentValue: 0
+  - score: 100
+    TimeFirstPlace: 8.314808
+    TimeFirstPlay: 27.111044
+    conceptValue: 95
+    experimentValue: 0
   - score: 0
     TimeFirstPlace: 0
     TimeFirstPlay: 0
+    conceptValue: 0
+    experimentValue: 0
   - score: 0
     TimeFirstPlace: 0
     TimeFirstPlay: 0
-  - score: 0
-    TimeFirstPlace: 0
-    TimeFirstPlay: 0
-  - score: 0
-    TimeFirstPlace: 0
-    TimeFirstPlay: 0
+    conceptValue: 0
+    experimentValue: 0

@@ -21,6 +21,7 @@ public class Manager : MonoBehaviour
     float Score;
     public bool endGame;
     public bool startGame;
+    private bool elonLeVrer;
 
     public float conceptVal;
     public float expVal;
@@ -94,9 +95,13 @@ public class Manager : MonoBehaviour
             timePlay = time;
         }
 
-        if (endGame == true)
+        if (endGame == true && !elonLeVrer)
         {
             FinalCalcul();
+
+            PlayerSecretStats();
+
+            elonLeVrer = true;
         }
     }
 
